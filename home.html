@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Town</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+        body {
+           /* background-image: url('./magicpattern-blob-composition-1690022960128.jpeg'); */
+           background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1036%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M11 1080L1091 0L1752.5 0L672.5 1080z' fill='url(%26quot%3b%23SvgjsLinearGradient1037%26quot%3b)'%3e%3c/path%3e%3cpath d='M649.6 1080L1729.6 0L2541.1 0L1461.1 1080z' fill='url(%26quot%3b%23SvgjsLinearGradient1037%26quot%3b)'%3e%3c/path%3e%3cpath d='M1911 1080L831 0L66 0L1146 1080z' fill='url(%26quot%3b%23SvgjsLinearGradient1038%26quot%3b)'%3e%3c/path%3e%3cpath d='M1176.4 1080L96.40000000000009 0L-656.5999999999999 0L423.4000000000001 1080z' fill='url(%26quot%3b%23SvgjsLinearGradient1038%26quot%3b)'%3e%3c/path%3e%3cpath d='M1353.1425770395979 1080L1920 513.1425770395979L1920 1080z' fill='url(%26quot%3b%23SvgjsLinearGradient1037%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 1080L566.8574229604021 1080L 0 513.1425770395979z' fill='url(%26quot%3b%23SvgjsLinearGradient1038%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1036'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1037'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1038'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+
+           background-repeat: no-repeat;
+           background-size: cover;
+           height: 100vh;
+
+           margin: 0;
+           padding: 0;
+
+           font-family: 'Roboto', sans-serif;
+
+
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(2px); /* Use backdrop-filter instead of filter */
+        }
+
+        /* Style the text */
+        .text{
+            color: white;
+            text-align: center;
+        }
+
+        h1{
+            font-weight: bolder;
+            color: bisque;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+            position: relative;
+        }
+
+        a::after{
+            content: '';
+            display: block;
+            height: 1px;
+            width: 0;
+            /* background-color: white; */
+            background-color: #ffffff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: width 0.1s;
+        }
+
+        a:hover::after{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text">
+            <h1>Small Projects So far</h1>
+            <p><a href="./bandersnatch/index.html">Bandersnatch - Choice based Game</a></p>
+            <p><a href="./chatApp/index.html">Socket.IO Test app</a></p>
+            <p><a href="./ImageCarousel/imagShow.html">Image Carousel</a></p>
+            <p><a href="./hamburgerMenu/haMenu.html">Basic Hamburger Menu</a></p>
+            <p><a href="./LoadingBar/loadingBar.html">Navbar Loading bar</a></p>
+            <p><a href="./Modal/modal.html">Simple Modal</a></p>
+            <p><a href="./QuizGame/index.html"></a></p>
+            <p><a href="./Randomizer/randomNumber.html">Randomizer</a></p>
+            <p><a href="./RandomQuoteGenerator/quotify.html">Quotify - Random Quote Generator</a></p>
+            <p><a href="./ToDoList/todoApp.html">To-DO List </a></p>
+            <p></p>
+        </div>
+    </div>
+</body>
+
+</html>

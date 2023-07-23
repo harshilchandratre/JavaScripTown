@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refresh Me! 🔄️😊</title>
+    <style>
+        #loading-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 0;
+            background-color: #007bff;
+            animation: bloomEffect 0.1s ease-in-out ;
+            box-shadow: 0 0 10px 2px #007bff;
+        }
+
+        @keyframes bloomEffect {
+            0% {
+                box-shadow: 0 0 10px 2px #007bff;
+            }
+
+            50% {
+                box-shadow: 0 0 14 6px #007bff;
+            }
+
+            100% {
+                box-shadow: 0 0 14px 2px #007bff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading-bar"></div>
+    <script>
+        document.onreadystatechange = function () {
+            var loadingBar = document.getElementById("loading-bar");
+
+            if (document.readyState === "complete") {
+                // Page has finished loading
+                loadingBar.style.width = "80%";
+                setTimeout(function () {
+                    // Hide the loading bar after a short delay
+                    loadingBar.style.display = "none";
+                }, 2500);
+            } else {
+                // Page is still loading
+                loadingBar.style.width = "0";
+                loadingBar.style.display = "block";
+            }
+        };
+
+    </script>
+</body>
+
+</html>

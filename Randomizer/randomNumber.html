@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="code"></p>
+    <button onclick="randomNum()">OK</button>
+    <script>
+            var numSet = [1,2,3,4,5,6,7,8,9,0];
+
+            function randomNum() {
+
+                var numIndex = Math.floor(Math.random() * numSet.length);
+                // var numIndex = Math.floor(Math.random() * numSet.length);
+                
+
+                var num = numSet[numIndex];
+                var innerNum = document.getElementById('code');
+                innerNum.innerHTML = num;
+            }
+
+            // function autoGen() {
+            //     setInterval(randomNum, 50);
+            // }
+
+            // autoGen();
+
+    </script>
+</body>
+
+</html>

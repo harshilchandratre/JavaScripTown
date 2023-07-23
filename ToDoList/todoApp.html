@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+
+        
+    }
+
+    h1 {
+        margin-top: 50px;
+    }
+
+    /* textarea {
+        padding: 10px;
+        width: 300px;
+        font-size: 16px;
+        margin-top: 20px;
+    } */
+    /* input[type="text"] */
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #f5f5f5;
+        margin-bottom: 5px;
+    }
+
+    li:hover {
+        background-color: #e0e0e0;
+        cursor: pointer;
+    }
+
+    .removeButton {
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        font-size: 14px;
+        border-radius: 3px;
+    }
+
+
+    /* style for textarea */
+    .sticky-note {
+    background-color: #ffe89e;
+    border: 2px solid #ffce71;
+    border-radius: 10px;
+    padding: 20px;
+    /* width: 300px; */
+    /* height: 300px; */
+    position: relative;
+
+    width: 25rem;
+    height: 22rem;
+
+    margin: auto;
+
+    
+  }
+
+  /* Sticky Note Textarea */
+  .sticky-note textarea {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333333;
+    padding: 10px;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    outline: none;
+  }
+
+  /* Sticky Note Lines */
+  .sticky-note:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: #ffce71;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  /* Sticky Note Bottom Shadow */
+  .sticky-note:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    right: 5px;
+    height: 5px;
+    background-color: #eaa200;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+</style>
+
+<body>
+    <div class="todoTitle">
+        <h1>To-DO List</h1>
+    </div>
+    <div class="todoArea">
+        <!-- <input type="text" placeholder="Add a task..." id="taskInput"> -->
+
+        <div class="sticky-note">
+            <textarea id="taskInput" cols="30" rows="10" placeholder="Add a task..."></textarea>
+          </div>
+       
+        <ul id="taskList"></ul>
+
+    </div>
+
+    <script>
+
+        //function to add task
+        function addTask() {
+            var taskInput = document.getElementById('taskInput');
+            var taskList = document.getElementById('taskList');
+
+            //trim unnecessary white spaces
+            var inputValue = taskInput.value.trim();
+
+            //check if input is empty 
+            if (inputValue === '') {
+                alert("Please Input something!")
+
+                return; //exiting to prevent adding empty list
+            }
+
+            //create a new list item
+            var li = document.createElement('li');
+            li.textContent = taskInput.value;
+
+            //create a delete button for the task
+            var deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.className = 'removeButton';
+
+            deleteButton.addEventListener('click', function () {
+                li.remove();
+            });
+
+            //append the delete button to the list item
+            li.appendChild(deleteButton);
+
+            //append the list item to the task list
+            taskList.appendChild(li);
+
+            //clear the input field
+            taskInput.value = '';
+        }
+
+        //event listner on adding a task by pressing Enter key
+        var taskInput = document.getElementById('taskInput');
+        taskInput.addEventListener('keydown', function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                addTask();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

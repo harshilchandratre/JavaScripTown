@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Input Modal</title>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .input-group {
+      margin-bottom: 10px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .input-group select {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .submit-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the modal element
+      const modal = document.getElementById('myModal');
+
+      // Get the close button
+      const closeBtn = document.getElementsByClassName('close')[0];
+
+      // Get the submit button
+      const submitBtn = document.getElementsByClassName('submit-btn')[0];
+
+      // Get the "News" button
+      const newsBtn = document.getElementById('newsBtn');
+
+      // Open the modal when the "News" button is clicked
+      newsBtn.addEventListener('click', function() {
+        modal.style.display = 'block';
+      });
+
+      // Close the modal when the close button is clicked
+      closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+      });
+
+      // Handle form submission
+      submitBtn.addEventListener('click', function() {
+        // Get user inputs
+        const locationInput = document.getElementById('location').value;
+        const dateInput = document.getElementById('date').value;
+        const newsTypeInput = document.getElementById('newsType').value;
+        const languageInput = document.getElementById('language').value;
+
+        // Log the inputs
+        console.log('Location:', locationInput);
+        console.log('Date:', dateInput);
+        console.log('News Type:', newsTypeInput);
+        console.log('Language:', languageInput);
+
+        // Close the modal after submission
+        modal.style.display = 'none';
+      });
+    });
+  </script>
+</head>
+<body>
+  <button id="newsBtn">News</button>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>User Input</h2>
+      <div class="input-group">
+        <label for="location">Location:</label>
+        <input type="text" id="location" placeholder="Enter location">
+      </div>
+      <div class="input-group">
+        <label for="date">Date:</label>
+        <input type="date" id="date">
+      </div>
+      <div class="input-group">
+        <label for="newsType">News Type:</label>
+        <input type="text" id="newsType" placeholder="Enter news type">
+      </div>
+      <div class="input-group">
+        <label for="language">Language:</label>
+        <select id="language">
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+          <option value="fr">French</option>
+        </select>
+      </div>
+      <button class="submit-btn">Submit</button>
+    </div>
+  </div>
+</body>
+</html>

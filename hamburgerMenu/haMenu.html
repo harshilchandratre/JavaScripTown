@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu-container {
+            position: relative;
+        }
+
+        .menu {
+            display: none;
+            /* Add styling for the menu items */
+        }
+
+        .menu-open {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-container">
+        <button class="menu-button">&#9776;</button>
+        <nav class="menu">
+            <ul>
+                <li class="menu-item">Home</li>
+                <li class="menu-item">About</li>
+                <li class="menu-item">Services</li>
+                <li class="menu-item">Contact</li>
+              </ul>
+        </nav>
+    </div>
+
+    <script>
+        const menuButton = document.querySelector('.menu-button');
+        const menu = document.querySelector('.menu');
+
+        menuButton.addEventListener('click', function () {
+            menu.classList.toggle('menu-open');
+        });
+
+    </script>
+
+</body>
+
+</html>

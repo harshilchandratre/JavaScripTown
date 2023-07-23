@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotify</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-image: url('https://source.unsplash.com/1920x1080/?dusk');
+            /* background-position: center; */
+            background-repeat: none;
+            background-size: cover;
+        }
+
+        h1 {
+            margin-top: 50px;
+            color: #d8c7b9;
+        }
+
+        .quoteHead,
+        .quoteButton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+
+        .container {
+            display: grid;
+            place-content: center;
+        }
+
+        .quote-container {
+
+            display: grid;
+            place-content: center;
+
+            background-color: #f8f1e579;
+            border: 1px solid #d8c7b9;
+            border-radius: 8px;
+            /* padding: 20px; */
+            text-align: center;
+            margin-bottom: 20px;
+            /* border: 2px solid black; */
+            margin: 50px;
+            padding: 5rem;
+            width: 35rem;
+            height: 5rem;
+
+            /* overflow: auto; */
+        }
+
+        .addButton {
+            position: fixed;
+
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #ffffff;
+            /* background-color: #506b8c; */
+            background-color: #5e4939;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .addButton:hover {
+            /* background-color: #3a5170; */
+            background-color: #46372b;
+        }
+
+        .quoteText {
+            font-family: 'Times New Roman', serif;
+            font-size: 24px;
+            color: #5e4939;
+            /* color: #d8c7b9; */
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="quoteHead">
+            <h1>Random Quote Generator</h1>
+        </div>
+
+        <div class="quote-container">
+            <div class="quoteArea">
+                <p class="quoteText" id="quote"></p>
+            </div>
+        </div>
+
+        <div class="quoteButton">
+            <button class="addButton" onclick="generateQuote()">Inspire Me!</button>
+        </div>
+    </div>
+
+    <script>
+        
+        // Array of quotes
+        var quotes = [
+            "A person can achieve everything by being simple and humble. – Rig Veda",
+            " Laziness erodes a person of his enthusiasm and energy. As a result the person loses all opportunities and finally becomes dejected and frustrated. The worst thing is that he stops believing in himself. – Sam Veda",
+            "Let the stronger man give to the man whose need is greater; let him gaze upon the lengthening path of life. For riches roll like the wheels of a chariot, turning from one to another. – Rig Veda",
+            "When there is harmony between the mind, heart, and resolution, then nothing is impossible. – Rig Veda",
+            "Do not be led by others, awaken your own mind, amass your own experience, and decide for yourself your own path. – Atharva Veda",
+            "One should performed karma for the benefit of humanity with an unbiased approach because bias gives birth to evil, which creates thousands of obstacles in our path. – Rig Veda",
+            "The person who is always involved in good deeds experiences incessant divine happiness. – Rig Veda",
+            "Truth can not be suppressed and always is the ultimate victor. – Yajur Veda",
+            "The person who is enthusiastic attains everything through hard work and efforts. He can subdue all his enemies. – Rig Veda",
+            "One fears death because of ignorance but when the ‘flame of knowledge’ is enkindled in the mind then the ‘fear of death’ ceases to exist. – Atharva Veda"
+        ];
+
+        //function to generate code
+        function generateQuote() {
+
+            //get random index no. from the quote array
+            var randomIndex = Math.floor(Math.random() * quotes.length);
+
+            //get random quote from index
+            var randomQuote = quotes[randomIndex];
+
+            //display the quote
+            var quoteElement = document.getElementById('quote');
+            quoteElement.innerHTML = randomQuote;
+
+        }
+
+        function startSlide() {
+            setInterval(generateQuote, 10000);
+        }
+
+        startSlide();
+
+        
+    </script>
+
+
+
+
+</body>
+
+</html>
