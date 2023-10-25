@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    background: #fff;
+    color: #000;
+}
+
+body {
+    margin: 0;
+    font-size: 1.4rem;
+    text-rendering: optimizeLegibility;
+
+    font-family: 'Galada', cursive;
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+.main {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    /* flex-wrap: wrap; */
+    background-color: grey;
+
+    background-image: radial-gradient(circle, #d64718, #d83059, #bd3f89, #8c57a6, #5065a9, #266da5, #00729a, #00758b, #007c84, #1d827a, #3a876e, #558b62);
+
+    background-image: linear-gradient(to right top, #ff0000, #ff003f, #ff006b, #ee0095, #cc00ba, #aa35d3, #794de7, #005ef4, #0070dc, #006d9f, #00625e, #0c5434);
+
+    background-image: linear-gradient(to right top, #ff3f00, #d56900, #ac7e00, #878800, #6a8c37, #538d4e, #408c62, #368973, #1c8680, #01828b, #0c7d94, #287798);
+
+
+
+}
+
+h1 {
+    /* font-size: 900px; */
+    /* #6ca4bf */
+    color: crimson;
+    color: #5f2f02;
+    color: #558b62;
+    /* color: #146a8e; */
+    font-size: 4vw;
+
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 40%;
+    /* padding: 2vw; */
+    background-color: #cfd2d7;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1.6px solid #3c342a;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+
+    /* border: 2px solid crimson; */
+
+
+}
+
+.container form {
+    width: max-content;
+    height: max-content;
+    background-color: white;
+    color: white;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+
+
+    border-radius: 20px;
+    /* overflow: auto; */
+    /* border: 2px solid crimson; */
+
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.container form input[type=text],
+input[type=email],
+input[type=password] {
+    height: max-content;
+    width: 100%;
+    padding: 0 10px;
+    /* background-color: red; */
+    border: none;
+    outline: none;
+
+    background-color: #cfd2d7;
+    background-color: white;
+
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+
+    border-radius: 20px;
+
+}
+
+.Name,
+.Email,
+.Password, .rePassword {
+    padding: 0 0 0 10px;
+
+    height: 30px;
+    width: 360px;
+
+    background-color: #cfd2d7;
+    background-color: white;
+    color: #000;
+
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 10px;
+
+    /* outline: 2px solid #146a8e; */
+    border: 2px solid #146a8e;
+
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    /* outline: none; */
+
+    /* outline: 2px solid #558b62; */
+
+    border-radius: 20px;
+    
+}
+
+.Password{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+i {
+    color: #5f2f02;
+    color: #146a8e;
+    /* color: #558b62; */
+}
+
+#passwordEye{
+    display: none;
+    padding: 0 10px 0 0;
+    color: rgb(71, 71, 71);
+}
+
+#passwordDye{
+    padding: 0 10px 0 0;
+    color: rgb(71, 71, 71);
+}
+
+/* #password-toggler {
+    display: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+} */
+
+
+.button {
+    height: max-content;
+    width: 360px;
+    background-color: #558b62;
+    background-color: #5f2f02;
+    background-color: #d64718;
+    color: white;
+    border: none;
+
+    font-size: 18px;
+    border-radius: 20px;
+
+    cursor: pointer;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+
+    /* border: 2px solid #d64718; */
+}
+
+.button:hover {
+    background-color: #be3609;
+}
+
+
+
+.hero-image {
+    height: 100vh;
+    width: 60%;
+    background-color: lightgreen;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    /* border: 2px solid #146a8e; */
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+
+}
+
+@media (max-width: 1157px) {
+
+    .main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        padding: 10vh 0;
+    }
+
+    .container form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70vw;
+        width: max-content;
+        /* height: 40vh; */
+    }
+
+    .button {
+        width: 60vw;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Name,
+    .Email,
+    .Password, .rePassword {
+        width: 60vw;
+        padding: 10px;
+        outline: 1.5px solid #146a8e;
+    }
+
+    h1 {
+        font-size: 10vw;
+
+    }
+
+
+    .hero-image {
+        width: 100%;
+    }
+
+}

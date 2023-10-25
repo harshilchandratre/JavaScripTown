@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <form action="#" id="resform">
+                <h1>Join Us</h1>
+                <div class="Name">
+                    <i class="ri-user-line" id="nameIcon"></i>
+                    <input type="text" placeholder="Enter Name" title="Alphabets only."
+                         />
+                </div>
+                <div class="Email">
+                    <i class="ri-mail-line" id="emailIcon"></i>
+                    <input type="email" placeholder="Enter Email" title="Valid email only."  />
+                </div>
+                <div class="Password">
+                    <i class="ri-key-line" id="passwordIcon"></i>
+                    <input id="password" type="password" placeholder="Choose A Password" title="8+ chars, 1 lowercase, 1 uppercase, 1 number, 1 special characters required."  />
+                    <i class="ri-eye-line" id="passwordEye" onclick="handleShow()"></i>
+                    <i class="ri-eye-close-line" id="passwordDye" onclick="handleShow()"></i>
+                </div>
+                <div class="rePassword" id="password-toggler">
+                    <i class="ri-lock-line" id="rePasswordIcon"></i>
+                    <input type="password" placeholder="Re-enter Password" title="Password must match." />
+                </div>
+                <!-- <button>Join in</button> -->
+                <input type="submit" value="Join in" class="button"/>
+            </form>
+        </div>
+        <div class="hero-image">
+            <img src="./images/welcome-3.jpg" alt="welcome_image" />
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
